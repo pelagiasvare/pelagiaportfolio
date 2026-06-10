@@ -1,0 +1,70 @@
+{
+  "hash": "1d6f310e",
+  "configHash": "7eb8d6e8",
+  "lockfileHash": "4bdcadd8",
+  "browserHash": "89be86d1",
+  "optimized": {
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.mjs",
+      "file": "@mui_material.js",
+      "fileHash": "977b492d",
+      "needsInterop": false
+    },
+    "@mui/material/styles": {
+      "src": "../../node_modules/@mui/material/styles/index.mjs",
+      "file": "@mui_material_styles.js",
+      "fileHash": "e2406156",
+      "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "e384a08b",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bfc42b31",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "b7cfced8",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "911e7a8d",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "9a988b78",
+      "needsInterop": true
+    },
+    "styled-components": {
+      "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "faee0cc9",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "emotion-is-prop-valid.esm-5WuaefyG": {
+      "file": "emotion-is-prop-valid.esm-5WuaefyG.js",
+      "isDynamicEntry": false
+    },
+    "react-CZunmVaX": {
+      "file": "react-CZunmVaX.js",
+      "isDynamicEntry": false
+    },
+    "styles-DYfmvewW": {
+      "file": "styles-DYfmvewW.js",
+      "isDynamicEntry": false
+    }
+  }
+}
