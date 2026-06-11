@@ -11,19 +11,19 @@ const skills = [
 const Wrapper = styled.section`
   background: var(--bg-primary);
   color: var(--text-primary);
-  padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+  padding: 2rem;
 `
 
 const Container = styled.div`
-  max-width: 1000px;
+  width: min(1180px, 100%);
   margin: 0 auto;
 `
 
 const Heading = styled.h2`
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-  font-size: 2.2rem;
-  font-weight: 600;
+  margin: 0 0 2rem;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 `
 
 const Grid = styled.div`
@@ -41,16 +41,17 @@ const SkillItem = styled.div`
   display: flex;
   align-items: center;
   padding: 0.4rem 0;
-  border-bottom: 1px dashed rgba(100, 116, 139, 0.3);
-  color: var(--text-muted);
+  border-bottom: 1px dashed #1e2d45;
+  color: #7e91a8;
   font-size: 1rem;
   font-weight: 400;
 
   &::before {
     content: '>';
     margin-right: 12px;
-    color: var(--accent);
+    color: #6366f1;
     font-size: 0.9rem;
+    font-weight: 700;
   }
 
   @media (max-width: 640px) {

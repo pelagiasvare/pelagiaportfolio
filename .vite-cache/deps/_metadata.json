@@ -1,55 +1,49 @@
 {
-  "hash": "1d6f310e",
-  "configHash": "7eb8d6e8",
+  "hash": "17981849",
+  "configHash": "c95c2fec",
   "lockfileHash": "4bdcadd8",
-  "browserHash": "89be86d1",
+  "browserHash": "0850ac7e",
   "optimized": {
     "@mui/material": {
       "src": "../../node_modules/@mui/material/index.mjs",
       "file": "@mui_material.js",
-      "fileHash": "977b492d",
-      "needsInterop": false
-    },
-    "@mui/material/styles": {
-      "src": "../../node_modules/@mui/material/styles/index.mjs",
-      "file": "@mui_material_styles.js",
-      "fileHash": "e2406156",
+      "fileHash": "5f471bcf",
       "needsInterop": false
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "e384a08b",
+      "fileHash": "58dbe586",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "bfc42b31",
+      "fileHash": "23d800ba",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "b7cfced8",
+      "fileHash": "59a2d6a6",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "911e7a8d",
+      "fileHash": "c900715a",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "9a988b78",
+      "fileHash": "678a32f5",
       "needsInterop": true
     },
     "styled-components": {
       "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "styled-components.js",
-      "fileHash": "faee0cc9",
+      "fileHash": "2b088869",
       "needsInterop": false
     }
   },
@@ -60,10 +54,6 @@
     },
     "react-CZunmVaX": {
       "file": "react-CZunmVaX.js",
-      "isDynamicEntry": false
-    },
-    "styles-DYfmvewW": {
-      "file": "styles-DYfmvewW.js",
       "isDynamicEntry": false
     }
   }

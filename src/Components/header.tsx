@@ -5,16 +5,15 @@ const Wrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 10;
   width: 100%;
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  padding:0.1rem 2rem;
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
 `
 
 const Nav = styled.nav`
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1180px, 100%);
   min-height: 76px;
   margin: 0 auto;
   display: flex;

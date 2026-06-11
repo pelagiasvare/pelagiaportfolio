@@ -7,7 +7,8 @@ const Wrapper = styled.section`
   align-items: center;
   background: var(--bg-primary);
   color: var(--accent);
-  padding: 7rem 1rem 4rem;
+  padding: 2rem;
+  margin-top: 5rem;
 `
 
 const Container = styled.div`
@@ -31,7 +32,7 @@ const Content = styled.div`
 
 const SmallText = styled.p`
   margin: 0;
-  color: var(--text-primary);
+  color: var(--accent);
   font-size: 1rem;
 `
 
@@ -62,7 +63,12 @@ const Cursor = styled.span`
   background: var(--accent);
   margin-left: 4px;
   border-radius: 2px;
-  animation: 0.9s infinite;
+  animation: blink 0.9s infinite;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
 `
 
 const Description = styled.p`
@@ -76,45 +82,47 @@ const Description = styled.p`
 const ButtonRow = styled.div`
   display: flex;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+
 `
 
-const SolidButton = styled.a`
-  padding: 0.75rem 2rem;
-  border: 2px solid var(--accent);
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--bg-primary);
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.25s;
-
+const SolidButton = styled.button`
+padding : 10px;
+border-radius: 9px;
+border:1px solid var(--accent);
+background-color:transparent;
+color: var(--accent);
+width:150px;
+height: 60px;
+align-items: center;
+  
   &:hover {
     background: transparent;
     color: var(--accent);
   }
 `
 
-const OutlineButton = styled.a`
-  padding: 0.75rem 2rem;
-  border: 2px solid var(--accent);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.25s;
+const OutlineButton = styled.button`
+padding : 10px;
+border-radius: 9px;
+border-color:#fff;
+background-color:var(--accent);
+border:1px solid var(--accent);
+color: var(--bg-primary);
+width:150px;
+height: 60px;
+align-items: center;
+justify-content: center;
 
   &:hover {
     background: var(--accent);
     color: var(--bg-primary);
   }
+
 `
 
 const VideoCircle = styled.div`
-  width: min(420px, 76vw);
+  width: min(340px, 60vw);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
@@ -131,9 +139,7 @@ const VideoEl = styled.video`
 `
 
 const ROLES = [
-  'Frontend Developer',
   'Software Developer',
-  'BatsiFix Creator',
 ]
 
 function useTypewriter() {
@@ -154,7 +160,6 @@ function useTypewriter() {
         setIsDeleting(false)
         setWhichWord(prev => (prev + 1) % ROLES.length)
       }, 45)
-
       return () => clearTimeout(timer)
     }
 
@@ -194,8 +199,12 @@ const Hero = () => {
             service professionals.
           </Description>
           <ButtonRow>
-            <SolidButton href="#contact">Hire Me</SolidButton>
-            <OutlineButton href="#projects">View Projects</OutlineButton>
+            <SolidButton onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              Hire Me
+            </SolidButton>
+            <OutlineButton onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+              View Projects
+            </OutlineButton>
           </ButtonRow>
         </Content>
         <VideoCircle>

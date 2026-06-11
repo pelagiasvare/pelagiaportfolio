@@ -1,29 +1,28 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  background: var(--bg-primary);
   color: var(--text-primary);
-  padding: clamp(4rem, 8vw, 7rem) 1.5rem;
-`;
+  padding: 2rem;
+`
 
 const Container = styled.div`
-  max-width: 1000px;
+  width: min(1180px, 100%);
   margin: 0 auto;
-`;
+`
 
 const Heading = styled.h2`
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  letter-spacing: -0.3px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
   color: var(--text-primary);
-`;
+`
 
 const Bio = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--text-muted);
-`;
+  margin: 0;
+`
 
 const About = () => {
   return (
@@ -31,15 +30,11 @@ const About = () => {
       <Container>
         <Heading>About Me</Heading>
         <Bio>
-          I'm a Frontend Developer and Software Development Student passionate about
-          creating user-centered digital experiences. I specialize in building clean,
-          responsive, and intuitive interfaces. Currently focused on BatsiFix, a platform
-          connecting users with trusted home service professionals, while continuously
-          expanding my full-stack development skills.
+          I'm a Frontend Developer and Software Development Student passionate about creating user-centered digital experiences. I specialize in building clean, responsive, and intuitive interfaces. Currently focused on BatsiFix, a platform connecting users withtrusted home service professionals, while continuously expanding my full-stack development skills.
         </Bio>
       </Container>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default About;                     
+export default About
