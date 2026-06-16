@@ -4,7 +4,7 @@ export const darkThemeColors = {
   bgSecondary: '#232d41',
   textPrimary: '#f8fafc',
   textMuted: '#a9bddb',
-  accent: '#2563eb',
+  accent: '#1e90ff',
   border: '#34405e',
   cardBg: '#232d41',
   footerBg: '#151a27',
@@ -16,7 +16,7 @@ export const lightThemeColors = {
   bgSecondary: '#ffffff',
   textPrimary: '#1b202e',
   textMuted: '#475569',
-  accent: '#2563eb',
+  accent: '#1e90ff',
   border: '#d1dce8',
   cardBg: '#ffffff',
   footerBg: '#e9eff8',
@@ -27,7 +27,7 @@ export const commonColors = {
   success: '#22c55e',
   error: '#ef4444',
   warning: '#f59e0b',
-  info: '#3b82f6',
+  info: '#1e90ff',
 } as const
 
 // CSS Variables (used in styled-components)

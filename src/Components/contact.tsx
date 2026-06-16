@@ -8,16 +8,14 @@ const accessKeyField = ['access', 'key'].join('_')
 
 const Wrapper = styled.section`
   color: var(--text-primary);
-  padding: 4rem 2rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 2rem;
+  padding-top: 5rem;
+  text-align:left;
 `
 
 const Grid = styled.div`
   width: min(1100px, 100%);
-  margin: 0 auto;
+  margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -37,10 +35,12 @@ const LeftCol = styled.div`
 `
 
 const Heading = styled.h2`
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
-  margin: 0;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+  text-align:left;
 `
 
 const Description = styled.p`
@@ -99,19 +99,18 @@ const Form = styled.form`
 
 const SubmitButton = styled.button`
   width: 100%;
-  min-height: 56px;
+  padding: 0.75rem 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--accent);
   color: #ffffff;
   font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-weight: 600;
   cursor: pointer;
-  transition: filter 0.2s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 
   &:hover:not(:disabled) {
     filter: brightness(1.1);

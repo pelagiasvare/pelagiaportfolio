@@ -33,35 +33,37 @@ const Content = styled.div`
 const SmallText = styled.p`
   margin: 0;
   color: var(--accent);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  letter-spacing: 0.03em;
 `
 
 const BigName = styled.h1`
   margin: 0;
   color: var(--text-primary);
-  font-size: 4rem;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 `
 
 const RoleRow = styled.div`
   display: flex;
   align-items: center;
-  min-height: 2.5rem;
+  min-height: 3rem;
 `
 
 const RoleText = styled.span`
   color: var(--accent);
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-weight: 800;
 `
 
 const Cursor = styled.span`
   display: inline-block;
   width: 3px;
-  height: 1.8rem;
+  height: clamp(1.4rem, 2.5vw, 2rem);
   background: var(--accent);
-  margin-left: 4px;
+  margin-left: 6px;
   border-radius: 2px;
   animation: blink 0.9s infinite;
 
@@ -74,7 +76,7 @@ const Cursor = styled.span`
 const Description = styled.p`
   margin: 0;
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   line-height: 1.7;
   max-width: 560px;
 `
@@ -83,19 +85,32 @@ const ButtonRow = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+`
 
+const BaseButton = `
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 150px;
+  height: 52px;
+  padding: 0 1.75rem;
+  border-radius: 6px;
+  border: 1.5px solid var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
 `
 
 const SolidButton = styled.button`
-padding : 10px;
-border-radius: 9px;
-border:1px solid var(--accent);
-background-color:transparent;
-color: var(--accent);
-width:150px;
-height: 60px;
-align-items: center;
-  
+  ${BaseButton}
+  background: var(--accent);
+  color: #ffffff;
+
   &:hover {
     background: transparent;
     color: var(--accent);
@@ -103,31 +118,23 @@ align-items: center;
 `
 
 const OutlineButton = styled.button`
-padding : 10px;
-border-radius: 9px;
-border-color:#fff;
-background-color:var(--accent);
-border:1px solid var(--accent);
-color: var(--bg-primary);
-width:150px;
-height: 60px;
-align-items: center;
-justify-content: center;
+  ${BaseButton}
+  background: transparent;
+  color: var(--accent);
 
   &:hover {
     background: var(--accent);
-    color: var(--bg-primary);
+    color: #ffffff;
   }
-
 `
 
 const VideoCircle = styled.div`
-  width: min(340px, 60vw);
+  width: min(500px, 80vw);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--accent);
-  box-shadow: 0 0 60px rgba(129, 140, 248, 0.2);
+  box-shadow: 0 0 60px rgba(30, 144, 255, 0.2);
   justify-self: center;
 `
 
@@ -138,9 +145,9 @@ const VideoEl = styled.video`
   display: block;
 `
 
-const ROLES = [
-  'Software Developer',
-]
+
+
+const ROLES = ['Software Developer']
 
 function useTypewriter() {
   const [displayText, setDisplayText] = useState('')
@@ -194,22 +201,20 @@ const Hero = () => {
           </RoleRow>
           <Description>
             Frontend Developer and Software Development Student dedicated to
-            creating clean, responsive, and user-friendly applications. Currently
-            building BatsiFix, a platform that connects users with trusted home
-            service professionals.
+            creating clean, responsive, and user-friendly applications.
           </Description>
           <ButtonRow>
             <SolidButton onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Hire Me
+              Hire Me 
             </SolidButton>
             <OutlineButton onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
-              View Projects
+              View Projects 
             </OutlineButton>
           </ButtonRow>
         </Content>
         <VideoCircle>
           <VideoEl autoPlay muted loop playsInline>
-            <source src="/WhatsApp%20Video%202026-06-09%20at%2010.25.00.mp4" type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
           </VideoEl>
         </VideoCircle>
       </Container>

@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 const skills = [
-  'React / Next.js',
-  'Node.js / Python',
-  'TypeScript',
-  'CSS / Styled-Components',
-  'Git / GitHub',
+  { label: 'React', image: '/React_Logo_PNG_Vector__SVG__Free_Download-removebg-preview.png' },
+  { label: 'JavaScript', image: '/JavaScript_Tips-removebg-preview.png' },
+  { label: 'HTML', image: '/HTML-removebg-preview.png' },
+  { label: 'GitHub', image: '/Diffraction_Icon__GitHub_-removebg-preview.png' },
+  { label: 'Vite', image: '/What_is_Vitejs__An_Overview_of_the_New_Front-end_Build_Tool-removebg-preview.png' },
+  { label: 'Download', image: '/download-removebg-preview.png' },
 ]
 
 const Wrapper = styled.section`
@@ -20,44 +21,31 @@ const Container = styled.div`
 `
 
 const Heading = styled.h2`
-  margin: 0 0 2rem;
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
-  font-weight: 700;
+  margin: 0 0 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
+  text-align: center;
 `
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem 2rem;
 
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-`
-
-const SkillItem = styled.div`
+const FlexRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 0.4rem 0;
-  border-bottom: 1px dashed #1e2d45;
-  color: #7e91a8;
-  font-size: 1rem;
-  font-weight: 400;
+  gap: 2.5rem;
+`
 
-  &::before {
-    content: '>';
-    margin-right: 12px;
-    color: #6366f1;
-    font-size: 0.9rem;
-    font-weight: 700;
-  }
+const IconImg = styled.img`
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 
-  @media (max-width: 640px) {
-    &::before {
-      margin-right: 10px;
-    }
+  &:hover {
+    transform: scale(1.1);
   }
 `
 
@@ -66,11 +54,12 @@ const Skills = () => {
     <Wrapper id="skills">
       <Container>
         <Heading>Skills & Technologies</Heading>
-        <Grid>
+      
+        <FlexRow>
           {skills.map((skill) => (
-            <SkillItem key={skill}>{skill}</SkillItem>
+            <IconImg key={skill.label} src={skill.image} alt={skill.label} />
           ))}
-        </Grid>
+        </FlexRow>
       </Container>
     </Wrapper>
   )
