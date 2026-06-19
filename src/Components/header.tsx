@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { useThemeMode } from '../ThemeContext'
 
@@ -57,6 +58,57 @@ const NavLinks = styled.div`
   }
 `
 
+const Hamburger = styled.div`
+  display: none;
+  font-size: 1.8rem;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+
+  @media (max-width: 640px) {
+    display: block;
+  }
+`
+
+const MobileMenu = styled.ul<{ $open: boolean }>`
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  list-style: none;
+  margin: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  backdrop-filter: blur(16px);
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    display: ${({ $open }) => ($open ? 'flex' : 'none')};
+  }
+`
+
 const ThemeToggle = styled.button`
   width: 38px;
   height: 38px;
@@ -87,6 +139,11 @@ const ThemeToggle = styled.button`
 
 const Header = () => {
   const { isDark, toggleTheme } = useThemeMode()
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleNavClick = () => {
+    setMenuOpen(false)
+  }
 
   return (
     <Wrapper>
@@ -102,6 +159,10 @@ const Header = () => {
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
           </NavLinks>
+
+          <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </Hamburger>
 
           <ThemeToggle
             type="button"
@@ -127,6 +188,14 @@ const Header = () => {
             )}
           </ThemeToggle>
         </NavActions>
+
+        <MobileMenu $open={menuOpen} id="menu">
+          <li><a href="#home" onClick={handleNavClick}>Home</a></li>
+          <li><a href="#about" onClick={handleNavClick}>About</a></li>
+          <li><a href="#skills" onClick={handleNavClick}>Skills</a></li>
+          <li><a href="#projects" onClick={handleNavClick}>Projects</a></li>
+          <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
+        </MobileMenu>
       </Nav>
     </Wrapper>
   )

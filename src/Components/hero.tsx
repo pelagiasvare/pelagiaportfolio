@@ -189,6 +189,15 @@ function useTypewriter() {
 const Hero = () => {
   const typedRole = useTypewriter()
 
+  const handleDownloadCV = () => {
+    const link = document.createElement('a')
+    link.href = '/PelagiaSvareCv.pdf'
+    link.download = 'PelagiaSvareCv.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <Wrapper id="home">
       <Container>
@@ -204,8 +213,8 @@ const Hero = () => {
             creating clean, responsive, and user-friendly applications.
           </Description>
           <ButtonRow>
-            <SolidButton onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Hire Me 
+            <SolidButton onClick={handleDownloadCV}>
+              Download CV
             </SolidButton>
             <OutlineButton onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               View Projects 

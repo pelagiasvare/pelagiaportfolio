@@ -18,8 +18,8 @@ const projects: Project[] = [
     description:
       "A modern bakery website with a clean design, showcasing products, online ordering, and a blog for recipes and baking tips.",
     image: '/bakersinn.png',
-    githublink: 'https://github.com/pelagiasvare/mybakerinn.git',
-    livelink: 'https://mybakerinn.netlify.app/',
+    githublink: 'https://github.com/pelagiasvare/bakersinnwebisite.git',
+    livelink: 'https://pelagiasvare.github.io/bakersinnwebisite/',
     tags: ['React', 'Styled-Components', 'Responsive'],
     category: 'frontend',
     categoryLabel: 'FRONTEND',
@@ -45,6 +45,39 @@ const projects: Project[] = [
     tags: ['React', 'JavaScript', 'CSS'],
     category: 'frontend',
     categoryLabel: 'FRONTEND',
+  },
+  {
+    title: 'My First Website',
+    description:
+      'I created a simple website using three files: HTML for structure, CSS for design, and JavaScript for interactivity. Linked them together, added content, styled it, and used JavaScript for actions like buttons. Open the HTML file in a browser to view your site.',
+    image: '/firstwebsite.png',
+    githublink: 'https://github.com/pelagiasvare/myfirstwebsite.git',
+    livelink: 'https://pelagiasvare.github.io/myfirstwebsite/',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    category: 'frontend',
+    categoryLabel: 'FRONTEND',
+  },
+  {
+    title: 'Weather App',
+    description:
+      'A simple weather site: HTML for input, button, and result div; CSS for styling; JS to fetch weather from OpenWeatherMap API using fetch(). On button click, get city name, request API, parse JSON, and display temperature, description, and humidity dynamically.',
+    image: '/weatherapp.png',
+    githublink: 'https://github.com/pelagiasvare/weather.git',
+    livelink: 'https://pelagiasvare.github.io/weather/',
+    tags: ['HTML', 'CSS', 'JavaScript', 'API'],
+    category: 'frontend',
+    categoryLabel: 'FRONTEND',
+  },
+  {
+    title: 'Calculator',
+    description:
+      'A calculator application built with Python, performing basic arithmetic operations like addition, subtraction, multiplication, and division.',
+    image: '/calculator.jpg',
+    githublink: 'https://github.com/pelagiasvare/createcalculator.git',
+    livelink: '',
+    tags: ['Python'],
+    category: 'backend',
+    categoryLabel: 'BACKEND',
   },
 ]
 
